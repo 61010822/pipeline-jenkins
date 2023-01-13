@@ -7,6 +7,8 @@ echo "******************************"
 echo "*** Building Docker Images ***"
 echo "******************************"
 
-sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
-cd jenkins/build/ && ls && docker-compose -f docker-compose-build.yml build --no-cache
+
+cd jenkins/build/ && ls && docker build -t maven-proj:$BUILD_TAG -f Dockerfile-java
+
+// docker-compose -f docker-compose-build.yml build --no-cache
