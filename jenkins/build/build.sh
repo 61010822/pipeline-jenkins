@@ -9,6 +9,6 @@ echo "******************************"
 
 
 
-cd jenkins/build/ && ls && docker build -t maven-proj:$BUILD_TAG -f Dockerfile-java
+cd jenkins/build/ && ls && docker build -f Dockerfile-java maven-proj:$BUILD_TAG 
 
 # docker-compose -f docker-compose-build.yml build --no-cache
