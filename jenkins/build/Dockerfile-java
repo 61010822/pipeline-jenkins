@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine
-FROM ubuntu:slim
+FROM ubuntu:bionic
 
 RUN mkdir /app
 
