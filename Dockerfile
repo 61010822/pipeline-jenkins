@@ -5,7 +5,7 @@ USER root
 # Install ansible
 RUN apt-get update && apt-get install python3-pip -y
 
-RUN pip3 install ansible --upgrade
+RUN pip3 install ansible --upgrade && pip3 install --upgrade pysqlite
 
 # Install Docker
 
