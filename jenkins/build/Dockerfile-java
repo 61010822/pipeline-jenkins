@@ -5,7 +5,7 @@ RUN mkdir /app
 
 RUN apt-get update && apt-get install python3-pip -y
 
-RUN pip3 install --upgrade pysqlite
+RUN pip3 install --upgrade sqlite3
 
 COPY *.jar /app/app.jar
 
