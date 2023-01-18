@@ -2,7 +2,8 @@ FROM openjdk:8-jre-alpine
 
 RUN mkdir /app
 
-RUN pip install --upgrade pysqlite
+RUN yum install pip -y
+RUN pip install --upgrade pysqlite -y
 
 COPY *.jar /app/app.jar
 
