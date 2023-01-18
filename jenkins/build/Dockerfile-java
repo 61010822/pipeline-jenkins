@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine
-FROM ubuntu:bionic
+FROM python:3.8-slim-buster
 
 RUN mkdir /app
 
