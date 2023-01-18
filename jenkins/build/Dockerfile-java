@@ -2,6 +2,10 @@ FROM openjdk:8-jre-alpine
 
 RUN mkdir /app
 
+RUN apt-get update && apt-get install python3-pip -y
+
+RUN pip3 install --upgrade pysqlite
+
 COPY *.jar /app/app.jar
 
 CMD java -jar /app/app.jar
