@@ -4,7 +4,7 @@ RUN mkdir /app
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get upgrade sqlite -y
-RUN python -m pip install --upgrade setuptools
+RUN apt-get upgrade setuptools
 
 
 COPY *.jar /app/app.jar
