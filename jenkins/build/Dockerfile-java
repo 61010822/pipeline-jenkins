@@ -4,7 +4,7 @@ FROM python:3.8-slim-buster
 RUN mkdir /app
 
 RUN apt-get update && apt-get upgrade -y
-RUN pythin -m pip install --upgrade sqlite-libs
+RUN python -m pip install --upgrade sqlite-libs
 
 
 COPY *.jar /app/app.jar
