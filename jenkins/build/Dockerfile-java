@@ -2,7 +2,7 @@ FROM openjdk:8-jre-alpine
 
 RUN mkdir /app
 
-RUN apk update && apk add python3-pip -y
+RUN apk update && apk add python3-pip
 
 RUN pip3 install --upgrade sqlite3
 
