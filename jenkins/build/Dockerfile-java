@@ -4,7 +4,7 @@ FROM python:3.8-slim-buster
 RUN mkdir /app
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get upgrade sqlite
+RUN apt-get upgrade sqlite -y
 
 
 COPY *.jar /app/app.jar
