@@ -3,8 +3,8 @@ FROM python:3.8-slim-buster
 
 RUN mkdir /app
 
-RUN apt-get update && apt-get install python && apk install --update py-pip -y
-RUN apt-get install --update sqlite-libs
+RUN apt-get update && apt-get upgrade -y
+RUN pythin -m pip install --upgrade sqlite-libs
 
 
 COPY *.jar /app/app.jar
