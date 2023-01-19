@@ -2,7 +2,8 @@ FROM openjdk:8-jre-alpine
 
 RUN mkdir /app
 
-RUN apk update && apk upgrade && apk add python && apk add --update py-pip && apk add --update zlib && apk add --update sqlite=3.32.1-r1
+RUN apk update && apk upgrade && apk add python && apk add --update py-pip && apk add --update zlib
+RUN pip install --update sqlite=3.32.1-r1
 
 
 COPY *.jar /app/app.jar
