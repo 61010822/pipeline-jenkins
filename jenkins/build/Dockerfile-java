@@ -4,7 +4,7 @@ RUN mkdir /app
 
 RUN apk upgrade && apk add python2 && apk add --update py2-pip 
 
-RUN pip2 install --upgrade pysqlite
+RUN pip2 install --upgrade zlib
 
 COPY *.jar /app/app.jar
 
