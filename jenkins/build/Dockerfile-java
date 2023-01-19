@@ -2,9 +2,8 @@ FROM openjdk:21-slim-buster
 
 RUN mkdir /app
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get upgrade sqlite -y
-RUN apt-get upgrade setuptools
+RUN apt-get update && apt-get upgrade -y && apt-get upgrade sqlite -y && apt-get install python
+RUN python -m install pip --upgrade setuptools
 
 
 COPY *.jar /app/app.jar
