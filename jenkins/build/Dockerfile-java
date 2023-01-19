@@ -1,9 +1,10 @@
 FROM openjdk:8-jre-alpine
+FROM python:3.8-slim-buster
 
 RUN mkdir /app
 
-RUN apk update && apk add python && apk add --update py-pip 
-RUN apk upgrade sqlite-libs
+RUN apt-get update && apt-get install python && apk install --update py-pip -y
+RUN apt-get install --update sqlite-libs
 
 
 COPY *.jar /app/app.jar
