@@ -2,9 +2,9 @@ FROM openjdk:8-jre-alpine
 
 RUN mkdir /app
 
-RUN apk upgrade && apk add python2 && apk add --update py2-pip 
+RUN apk upgrade && apk add python && apk add --update py-pip 
 
-RUN pip2 install --upgrade zlib
+RUN pip install --upgrade zlib
 
 COPY *.jar /app/app.jar
 
